@@ -1,0 +1,25 @@
+{
+	"name": "dotink/flourish-messenger",
+	"description": "Session based messaging for alerts and notifications",
+	"keywords": ["alert", "notification", "message"],
+	"license": "AGPL-3.0",
+	"type": "opus-package",
+	"authors": [
+		{
+			"name": "Matthew J. Sahagian",
+			"email": "msahagian@dotink.org",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"imarc/opus": "~1.0"
+	},
+	"autoload": {
+		"classmap": ["src/"]
+	},
+	"extra": {
+		"opus": {
+		}
+	}
+}
