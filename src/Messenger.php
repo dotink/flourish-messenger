@@ -72,14 +72,14 @@
 		public function record($domain, $name = NULL, $content = NULL)
 		{
 			if (func_num_args() == 1) {
-				$domain  = NULL;
-				$name    = NULL;
 				$content = func_get_arg(0);
+				$name    = NULL;
+				$domain  = NULL;
 
 			} elseif (func_num_args() == 2) {
-				$domain  = NULL;
-				$name    = func_get_arg(0);
 				$content = func_get_arg(1);
+				$name    = func_get_arg(0);
+				$domain  = NULL;
 
 			}
 
@@ -100,8 +100,8 @@
 			$formatter = $this->formatter;
 
 			if (func_num_args() == 1) {
-				$domain = NULL;
 				$name   = func_get_arg(0);
+				$domain = NULL;
 			}
 
 			if ($message = $this->retrieve($domain, $name)) {
@@ -126,8 +126,8 @@
 		public function exists($domain, $name = NULL)
 		{
 			if (func_num_args() == 1) {
-				$domain = NULL;
 				$name   = func_get_arg(0);
+				$domain = NULL;
 			}
 
 			return isset($_SESSION[self::getKey($name, $domain)])
@@ -168,8 +168,8 @@
 			$message = NULL;
 
 			if (func_num_args() == 1) {
-				$domain = NULL;
 				$name   = func_get_arg(0);
+				$domain = NULL;
 			}
 
 			if ($this->exists($domain, $name)) {
